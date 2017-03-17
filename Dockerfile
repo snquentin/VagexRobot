@@ -5,7 +5,7 @@ MAINTAINER snquentin <snquentin@msn.com>
 
 RUN apt-get update && \
 apt-get clean  && \
-apt-get install -y install php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
+apt-get install -y php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
 apt-get clean
 
 RUN wget https://raw.githubusercontent.com/WangCharlie/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
