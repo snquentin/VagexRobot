@@ -3,10 +3,10 @@
 FROM ubuntu:14.04.3
 MAINTAINER snquentin <snquentin@msn.com>
 
-RUN yum update && \
-yum clean  && \
-yum install -y install php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
-yum clean
+RUN apt-get update && \
+apt-get clean  && \
+apt-get install -y install php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
+apt-get clean
 
 RUN wget https://raw.githubusercontent.com/WangCharlie/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
 COPY entrypoint.sh /usr/local/bin/
