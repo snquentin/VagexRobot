@@ -3,16 +3,16 @@
 FROM centos
 MAINTAINER snquentin <snquentin@msn.com>
 
-RUN apt-get update && \
-apt-get clean  && \
-apt-get install -y php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
-#apt-get install -y php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
-apt-get clean
+RUN yum update && \
+yum clean  && \
+yum install wget php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
+#apt-get install php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
+yum clean
 
 #~/php-fpm$ docker pull php:5.6-fpm
 #http://www.runoob.com/docker/docker-install-php.html
 
-RUN wget https://raw.githubusercontent.com/WangCharlie/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
+RUN wget https://raw.githubusercontent.com/snquentin/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
