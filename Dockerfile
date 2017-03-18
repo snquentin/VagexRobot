@@ -1,12 +1,12 @@
 # VagexRobot.AllInOne
 
-FROM ubuntu:14.04.3
+FROM centos
 MAINTAINER snquentin <snquentin@msn.com>
 
 RUN apt-get update && \
 apt-get clean  && \
-#apt-get install -y php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
-apt-get install -y php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
+apt-get install -y php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
+#apt-get install -y php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
 apt-get clean
 
 #~/php-fpm$ docker pull php:5.6-fpm
