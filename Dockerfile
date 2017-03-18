@@ -20,6 +20,6 @@ ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 RUN screen -dmS vagex php /root/VagexRobot.AllInOne.php
 #RUN (crontab -u root -l; echo "@daily screen -X -S vagex quit; screen -dmS vagex php VagexRobot.AllInOne.php" ) | crontab -u root -l
-RUN (crontab -l; echo "@daily screen -X -S vagex quit; screen -dmS vagex php VagexRobot.AllInOne.php" ) | crontab -l
+#RUN (crontab -l; echo "@daily screen -X -S vagex quit; screen -dmS vagex php VagexRobot.AllInOne.php" ) | crontab -l
 
 RUN php VagexRobot.AllInOne.php
