@@ -1,11 +1,11 @@
 # VagexRobot.AllInOne
 
-FROM centos
 MAINTAINER snquentin <snquentin@msn.com>
 
+#pull kinogmt/centos-ssh
 RUN yum update -y && \
 #yum clean  && \
-yum install wget php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y
+yum install crontab wget php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y
 # && \
 #yum clean
 
