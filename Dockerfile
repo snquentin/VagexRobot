@@ -8,7 +8,7 @@ RUN yum update -y && \
 #yum clean  && \
 yum install wget php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y && \
 yum install gcc gcc-c++ autoconf vixie-cron -y && \
-yum install gcc gcc-c++ autoconf crontab -y && \
+yum install gcc gcc-c++ autoconf crontab -y
 #yum clean
 
 RUN wget https://raw.githubusercontent.com/snquentin/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
